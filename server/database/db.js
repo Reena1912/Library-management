@@ -1,12 +1,12 @@
 import mongoose from "mongoose";
 
 export const connectDB = () => {
-    mongoose.connect("", {
+    mongoose.connect(process.env.MONGO_URI, {
         dbName: "Library management",
 
     }).then(() => {
-        console.log("Connected to MongoDB");
+        console.log("database connected successfully");
     }).catch(err =>{
-        console.log("error connecting to MongoDB", err);
+        console.log("error connecting to database", err);
     })
 }
