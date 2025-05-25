@@ -29,7 +29,7 @@ export const errorMiddlewarw= (err,req,res,next)=>{
         err = new ErrorHandler(message, statusCode);
     }
 
-    if(err.name==="CastErrors"){
+    if(err.name==="CastError"){
         const statusCode = 400;
         const message = `Resource not found. Invalid: ${err.path}`;
         err = new ErrorHandler(message, statusCode);
