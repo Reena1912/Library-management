@@ -9,4 +9,4 @@ export const connectDB = () => {
     }).catch(err =>{
         console.log("error connecting to database", err);
     })
-}
+}  
